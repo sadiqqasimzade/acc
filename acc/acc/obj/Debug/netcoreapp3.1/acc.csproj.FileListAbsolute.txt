@@ -1,0 +1,14 @@
+C:\Users\admin\Desktop\git\all\acc\acc\obj\Debug\netcoreapp3.1\acc.csproj.AssemblyReference.cache
+C:\Users\admin\Desktop\git\all\acc\acc\obj\Debug\netcoreapp3.1\acc.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\Desktop\git\all\acc\acc\obj\Debug\netcoreapp3.1\acc.AssemblyInfoInputs.cache
+C:\Users\admin\Desktop\git\all\acc\acc\obj\Debug\netcoreapp3.1\acc.AssemblyInfo.cs
+C:\Users\admin\Desktop\git\all\acc\acc\obj\Debug\netcoreapp3.1\acc.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\git\all\acc\acc\bin\Debug\netcoreapp3.1\acc.exe
+C:\Users\admin\Desktop\git\all\acc\acc\bin\Debug\netcoreapp3.1\acc.deps.json
+C:\Users\admin\Desktop\git\all\acc\acc\bin\Debug\netcoreapp3.1\acc.runtimeconfig.json
+C:\Users\admin\Desktop\git\all\acc\acc\bin\Debug\netcoreapp3.1\acc.runtimeconfig.dev.json
+C:\Users\admin\Desktop\git\all\acc\acc\bin\Debug\netcoreapp3.1\acc.dll
+C:\Users\admin\Desktop\git\all\acc\acc\bin\Debug\netcoreapp3.1\acc.pdb
+C:\Users\admin\Desktop\git\all\acc\acc\obj\Debug\netcoreapp3.1\acc.dll
+C:\Users\admin\Desktop\git\all\acc\acc\obj\Debug\netcoreapp3.1\acc.pdb
+C:\Users\admin\Desktop\git\all\acc\acc\obj\Debug\netcoreapp3.1\acc.genruntimeconfig.cache
