@@ -19,7 +19,7 @@ namespace Task.Models
         }
         public static void WorkingHoursChecker(ref double workinghours)
         {
-            while (workinghours / 30 > 8 || workinghours == 0)
+            while (workinghours / 26 > 8 || workinghours == 0) //heftenin 6 gununu is gunu kimi goturdum
             {
                 Console.WriteLine("VIOLATION OF THE GOVERMENT LAW");
                 Console.Write("Working Hours:");

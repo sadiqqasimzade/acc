@@ -7,11 +7,11 @@ namespace acc.Models
 {
     internal interface IAccount
     {
-        public void FullNameInputChecker(ref string fullname);
+        public string FullNameInputChecker( string fullname);
 
-        public void EmailChecker(ref string email);
+        public string EmailChecker( string email);
 
-        public void PasswordChecker(ref string password);
+        public string PasswordChecker( string password);
 
         public void ShowInfo();
         
