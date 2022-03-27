@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Text.RegularExpressions;
 
 namespace Task.Models
@@ -11,9 +9,10 @@ namespace Task.Models
         public string Surname { get; set; }
         public int Age { get; set; }
 
+        //NameChecker
         public static void NameChecker(ref string name)
         {
-            Regex regex = new Regex("^[A-Z]+[a-z]+$"); 
+            Regex regex = new Regex("^[A-Z]+[a-z]+$");
             while (!regex.IsMatch(name))
             {
                 Console.WriteLine("Name must start with upper letter and after contain olny lower letters");
@@ -21,6 +20,8 @@ namespace Task.Models
                 name = Console.ReadLine();
             }
         }
+
+        //SurnameChecker
         public static void SurnameChecker(ref string surname)
         {
             Regex regex = new Regex("^[A-Z]+[a-z]+$");
@@ -31,20 +32,18 @@ namespace Task.Models
                 surname = Console.ReadLine();
             }
         }
+
+        //AgeChecker
         public static bool AgeChecker(ref int age, int min, int max = 122)//https://en.wikipedia.org/wiki/Oldest_people
         {
-            while ((age < min && age > 0) || age >= max||age<=0)
+
+            if (age < min || age < 0 || age >= max)
             {
-                Console.WriteLine("Try Again");
-                Console.Write("Age:");
-                age = Convert.ToInt32(Console.ReadLine());
-                if ((age < min && age > 0) || age >= max)
-                {
-                    //Console.WriteLine("You cant work (Legally)")
-                    Console.WriteLine("You don't fit the criteria"); 
-                    return false;
-                }
+                //Console.WriteLine("You cant work (Legally)")
+                Console.WriteLine("You don't fit the criteria");
+                return false;
             }
+
             return true;
         }
     }

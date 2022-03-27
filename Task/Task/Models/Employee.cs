@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Task.Models
 {
-    internal class Employee:Person
+    internal class Employee : Person
     {
         double SalaryHour { get; set; }
         double WorkingHour { get; set; }
@@ -19,11 +17,21 @@ namespace Task.Models
         }
         public static void WorkingHoursChecker(ref double workinghours)
         {
-            while (workinghours / 26 > 8 || workinghours == 0) //heftenin 6 gununu is gunu kimi goturdum
+            while (workinghours / 26 > 8 || workinghours<=0) //heftenin 6 gununu is gunu kimi goturdum
             {
                 Console.WriteLine("VIOLATION OF THE GOVERMENT LAW");
-                Console.Write("Working Hours:");
-                workinghours = Convert.ToDouble(Console.ReadLine());
+            SetWorkinHours:
+                try
+                {
+                    Console.Write("Working Hours:");
+                    workinghours = Convert.ToDouble(Console.ReadLine());
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    goto SetWorkinHours;
+                }
+
             }
         }
 
@@ -31,9 +39,18 @@ namespace Task.Models
         {
             while (workinghours * salaryperhour < 250)
             {
-                Console.WriteLine("VIOLATION OF THE GOVERMENT LAW");
-                Console.Write("Salary per Hour:");
-                salaryperhour = Convert.ToDouble(Console.ReadLine());
+                SetSalary:
+                try
+                {
+                    Console.WriteLine("VIOLATION OF THE GOVERMENT LAW");
+                    Console.Write("Salary per Hour:");
+                    salaryperhour = Convert.ToDouble(Console.ReadLine());
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    goto SetSalary;
+                }
             }
         }
 

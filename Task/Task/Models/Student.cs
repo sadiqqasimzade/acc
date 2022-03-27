@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Task.Models
 {
@@ -18,19 +16,30 @@ namespace Task.Models
             LanguageRank = languagerank;
         }
 
-        
+
 
         public static void PointCheck(ref double point)
         {
             while (point > 100 || point < 0)
             {
-                Console.Write("Points:");      
-                point = Convert.ToDouble(Console.ReadLine());
-            } 
+                SetPoint:
+                try
+                {
+                    Console.Write("Points must be between 0-100\nPoints:");
+                    point = Convert.ToDouble(Console.ReadLine());
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    goto SetPoint;
+                }
+            }
         }
         public bool ExamResult()
         {
-            if (IQRank + LanguageRank < 120) return false;
+            if (IQRank + LanguageRank < 120)
+                return false;
+
             return true;
         }
     }

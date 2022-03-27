@@ -7,51 +7,54 @@ namespace acc
     {
         static void Main()
         {
+
             int choise;
-            string fullname = "AsAs";
-            string email = "fasd";
-            string password = "";
-            bool access=false;
-            int counter = 0;
-            User[] users=new User[10];
+            string fullname ;
+            string email ;
+            string password;
+            User[] users = new User[0];
             do
             {
-                Console.Write("1)FillInfo 2)ShowInfo 3)End\nChoice:");
-                choise=Convert.ToInt32( Console.ReadLine());
+            Point1:
+                try
+                {
+                    Console.Write("1)Create User 2)ShowInfo 3)End\nChoice:");
+                    choise = Convert.ToInt32(Console.ReadLine());
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    goto Point1;
+                }
+
                 switch (choise)
                 {
                     case 1:
 
-                        if (counter < users.Length - 1)
-                        {
-                            Console.WriteLine($"Id:{User.Id}");
-                            users[counter] = new User(fullname, email, password);
-                            counter++;
-                        }
-                        else Console.WriteLine("No space available");
+                        Console.Write($"user-{User.Id} fullname:");
+                        fullname = Console.ReadLine();
+                        Console.Write($"user-{User.Id} email:");
+                        email = Console.ReadLine();
+                        Console.Write($"user-{User.Id} password:");
+                        password = Console.ReadLine();
+
+                        Array.Resize(ref users, users.Length + 1);
+                        users[users.Length - 1] = new User(fullname, email, password);
                         Console.WriteLine("Info filled successfully");
-                        access=true;
                         break;
-                        case 2:
-                        if (access)
-                        {
-                            for (int i = 0; i < counter; i++)
-                            {
-                                users[i].ShowInfo();
-                            }
-                        }
-                        else Console.WriteLine("Fill Info");
+                    case 2:
+                        foreach (var user in users)
+                            user.ShowInfo();
                         break;
-                    case 3:break;
-                    default: Console.WriteLine("Wrong Input");
+                    case 3: break;
+                    default:
+                        Console.WriteLine("Wrong Input");
                         break;
                 }
-
-               
-
-                
-            } while (choise!=3);
+            } while (choise != 3);
 
         }
+       
+
     }
 }

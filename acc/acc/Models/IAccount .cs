@@ -9,9 +9,9 @@ namespace acc.Models
     {
         public string FullNameInputChecker( string fullname);
 
-        public string EmailChecker( string email);
+        public string EmailInput( string email);
 
-        public string PasswordChecker( string password);
+        public bool PasswordChecker( string password);
 
         public void ShowInfo();
         
